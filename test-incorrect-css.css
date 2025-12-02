@@ -1,0 +1,77 @@
+/* selector-pseudo-class-no-unknown */
+a:hovor {
+  color: blue;
+}
+
+.item:fake-class {
+  display: block;
+}
+
+/* selector-pseudo-element-no-unknown */
+p::befre {
+  content: "x";
+}
+
+div::fake-element {
+  content: "y";
+}
+
+/* no-unknown-animations */
+.animated {
+  animation: slideInFake 1s ease;
+}
+
+/* font-family-no-missing-generic-family-keyword */
+.bad-font {
+  font-family: "Arial";
+}
+
+/* function-calc-no-unspaced-operator */
+.bad-calc {
+  width: calc(100% - 20px);
+  height: calc(50px + 10px);
+}
+
+/* no-duplicate-selectors */
+.duplicate-selector {
+  color: red;
+}
+
+.other-rule {
+  margin: 10px;
+}
+
+.duplicate-selector {
+  background: blue;
+}
+
+/* no-descending-specificity */
+.parent .child {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+/* color-hex-length (should be short) */
+.long-hex {
+  color: #fff;
+  background: #000;
+}
+
+/* function-url-quotes (missing quotes) */
+.no-quotes {
+  background-image: url("image.jpg");
+}
+
+/* length-zero-no-unit */
+.zero-units {
+  margin: 0;
+  padding: 0;
+}
+
+/* selector-list-comma-newline-after (will be auto-fixed to one line) */
+h1, h2, h3 {
+  color: green;
+}
