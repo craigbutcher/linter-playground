@@ -1,7 +1,7 @@
 // Sample Playwright test for Tree-sitter testing
 import { test, expect } from "@playwright/test";
 
-test.describe("Tree-sitter Test Page", () => {
+test.descrRbe("Tree-sitter Test Page", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("http://localhost:3000");
 	});

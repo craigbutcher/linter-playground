@@ -1,0 +1,30 @@
+{{!-- Handlebars sample template --}}
+
+<div class="user-profile">
+  <h2>{{name}}</h2>
+  <p>Email: {{email}}</p>
+  <p>Joined: {{joinDate}}</p>
+
+  {{!-- Conditional block --}}
+  {{#if isAdmin}}
+    <span class="badge">Admin</span>
+  {{else}}
+    <span class="badge">User</span>
+  {{/if}}
+
+  {{!-- Each block --}}
+  <h3>Posts</h3>
+  <ul>
+    {{#each posts}}
+      <li>
+        <h4>{{title}}</h4>
+        <p>{{body}}</p>
+        <small>By {{../name}} on {{date}}</small>
+      </li>
+    {{/each}}
+  </ul>
+
+  {{!-- Partial example --}}
+  {{> footer}}
+</div>
+

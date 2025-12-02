@@ -3,7 +3,6 @@
 type User = {
 	id: number;
 	name: string;
-	surname: string;
 	email?: string; // optional property
 };
 
@@ -41,7 +40,8 @@ function identity<T>(value: T): T {
 }
 
 // Example usage
-const user: User = { id: 1, name: "Alice", surname: 'Rabbit' }, account = new Account(user, Role.User);
+const user: User = { id: 1, name: "Alice" };
+const account = new Account(user, Role.User);
 account.deposit(100);
 
 console.log(`Balance: ${account.getBalance()}`);
